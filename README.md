@@ -25,7 +25,7 @@ L'application permet aux utilisateurs de sélectionner un fichier Excel, de le t
 1. **Cloner le dépôt** :
 
    \`\`\`bash
-   git clone https://github.com/votre_nom_utilisateur/excel-import.git
+   git clone [https://github.com/votre_nom_utilisateur/excel-import.git](https://github.com/MehdiJonJS/excel-import.git)
    cd excel-import/excel-import-app
    \`\`\`
 
@@ -48,7 +48,7 @@ L'application permet aux utilisateurs de sélectionner un fichier Excel, de le t
 1. **Cloner le dépôt** :
 
    \`\`\`bash
-   git clone https://github.com/votre_nom_utilisateur/excel-import.git
+   git clone [https://github.com/votre_nom_utilisateur/excel-import.git](https://github.com/MehdiJonJS/excel-import.git)
    cd excel-import/excel-backend
    \`\`\`
 
@@ -63,7 +63,7 @@ L'application permet aux utilisateurs de sélectionner un fichier Excel, de le t
    Créez un fichier `.env` à la racine du projet avec les variables suivantes :
 
    \`\`\`env
-   MONGODB_URI=mongodb+srv://root:root@mycluster.ewfr9.mongodb.net/excel-data?retryWrites=true&w=majority&appName=MyCluster
+   MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/excel-data?retryWrites=true&w=majority
    \`\`\`
 
 4. **Démarrer l'application** :
@@ -83,23 +83,24 @@ Pour que l'application puisse se connecter à MongoDB Atlas, vous devez définir
 Exemple de contenu pour `.env` :
 
 \`\`\`env
-MONGODB_URI=mongodb+srv://root:root@mycluster.ewfr9.mongodb.net/excel-data?retryWrites=true&w=majority&appName=MyCluster
+MONGODB_URI=mongodb+srv://root:root@mycluster.ewfr8.mongodb.net/excel-data?retryWrites=true&w=majority&appName=MyCluster
 \`\`\`
 
 ## Utilisation
-
-### Frontend
 
 1. **Sélectionner un fichier Excel** :
    - Allez sur [http://localhost:4200](http://localhost:4200).
    - Sélectionnez le fichier `input-xl.xlsx` dans l'input de fichier.
    - Cliquez sur le bouton "Importer".
 
-2. **Vérifier les logs** :
-   - Ouvrez la console du navigateur (F12 -> Console).
-   - Assurez-vous que les données sont correctement récupérées et traitées.
+2. **Vérifier dans MondoDB** :
+   - Cliquez sur l'onglet collections, vous devez avoir apparaite "krakens"
+   - Cliquez sur krakens et vous aurez les données.
+  
+     ![image](https://github.com/user-attachments/assets/26229059-3192-4f94-b27c-be5c262ae8be)
 
-### Backend
+
+### Test Swagger
 
 1. **Accéder à Swagger** :
    - Allez sur [http://localhost:3000/api](http://localhost:3000/api).
@@ -161,3 +162,5 @@ MONGODB_URI=mongodb+srv://root:root@mycluster.ewfr9.mongodb.net/excel-data?retry
     "category": "equipment"
   }
 ]
+\`\`\`json
+- Cliquez sur `Execute`
